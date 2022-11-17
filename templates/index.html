@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset=utf-8>
+  <title></title>
+  <link rel="stylesheet" href="stylesheets/style.css"></style>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+</head>
+<body>
+<h1>Audio Manager</h1>
+<h2>Upload an audio file</h2>
+<form action = "/post" method = "post" enctype="multipart/form-data">  
+  <input type="file" name="file" />  
+  <input type = "submit" value="Upload">  
+</form>  
+<br />
+<h2>Query an audio file</h2>
+<form action = "/info" method = "get" enctype="multipart/form-data">  
+  <label for="name">File name:</label>
+  <input name="name" />  
+  <input type = "submit" value="Get info">  
+</form>  
+<br />
+<h2>Get list of audio files</h2>
+<form action = "/list" method = "get" enctype="multipart/form-data">  
+  <label for="maxduration">Max Duration Filter:</label>
+  <input name="maxduration" />  
+  <input type = "submit" value="Get list">  
+</form>  
+<br />
+<h2>Download an audio file</h2>
+<form action = "/download" method = "get" enctype="multipart/form-data">  
+  <label for="name">File name:</label>
+  <input name="name" />  
+  <input type = "submit" value="Download">  
+</form> 
+</body>
+</html>
